@@ -10,6 +10,8 @@ import (
 	"github.com/l-dandelion/yi-ants-go/core/action/rpc"
 	"github.com/l-dandelion/yi-ants-go/core/action/watcher"
 	"github.com/l-dandelion/yi-ants-web/global"
+	"github.com/l-dandelion/yi-ants-go/lib/library/log"
+	"time"
 )
 
 func main() {
@@ -17,6 +19,7 @@ func main() {
 }
 
 func init() {
+	initLog()
 	constant.RunMode = beego.BConfig.RunMode
 	tcpPort, err := beego.AppConfig.Int("tcpport")
 	if err != nil {
@@ -60,3 +63,11 @@ func init() {
 	}
 }
 
+func initLog() {
+	logPath := beego.AppConfig.String("logpath")
+	logFileName := beego.AppConfig.String("appname")
+	err := log.ConfigLocalFilesystemLogger(logPath, logFileName, time.Hour*24*30, time.Hour)
+	if err != nil {
+		panic(err)
+	}
+}
