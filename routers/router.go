@@ -25,4 +25,6 @@ func init() {
 	beego.Router("/api/spider/recover", &spider.RecoverController{}, mappingMethods)
 	beego.Router("/api/spider/complile", &spider.ComplileController{}, mappingMethods)
 	beego.Router("/api/spider/delete", &spider.DeleteController{}, mappingMethods)
+
+	//beego.Router("/api/test", &test.IndexController{}, mappingMethods)
 }

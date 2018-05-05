@@ -1,0 +1,23 @@
+package test
+
+
+
+
+template
+{
+"tableName": "pixabay2",
+"kind": "mysql",
+"node": "array|.item",
+"href": "attr.href|a",
+"tags": "attr.alt|img"
+}
+
+mysql
+
+https://pixabay.com/zh/photos/?image_type=all&pagi={1-8000,1}
+{
+    "url": "attr.src|#media_container img",
+    "author": "attr.alt|.right .hover_opacity",
+    "detail": "texts|#details tbody tr",
+    "tags": "attr.alt|#media_container img"
+}

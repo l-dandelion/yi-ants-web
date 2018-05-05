@@ -12,6 +12,7 @@ import (
 	"github.com/l-dandelion/yi-ants-web/global"
 	"github.com/l-dandelion/yi-ants-go/lib/library/log"
 	"time"
+	"github.com/l-dandelion/yi-ants-go/core/processors/mysqlprocessor"
 )
 
 func main() {
@@ -20,6 +21,7 @@ func main() {
 
 func init() {
 	initLog()
+	initDB()
 	constant.RunMode = beego.BConfig.RunMode
 	tcpPort, err := beego.AppConfig.Int("tcpport")
 	if err != nil {
@@ -70,4 +72,9 @@ func initLog() {
 	if err != nil {
 		panic(err)
 	}
+}
+
+func initDB() {
+	mysqlStr := beego.AppConfig.String("mysql")
+	mysqlprocessor.InitMysql(mysqlStr)
 }
