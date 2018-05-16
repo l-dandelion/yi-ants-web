@@ -6,6 +6,7 @@ import (
 	"github.com/l-dandelion/yi-ants-web/models/service/spider"
 	"encoding/json"
 	"github.com/l-dandelion/yi-ants-web/global"
+	"github.com/astaxie/beego"
 )
 
 type PostAddController struct {
@@ -76,4 +77,5 @@ func (c *PostAddController) Process() {
 		return
 	}
 	c.SetOutMapData("Success", true)
+	beego.Info(model)
 }

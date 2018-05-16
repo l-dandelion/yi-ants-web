@@ -21,10 +21,11 @@ func (c *DetailController) Process() {
 		c.SetError(yierr)
 		return
 	}
-	spiderInfoMap, yierr := spider.GetSpiderInfoMap(spiderName)
+	totalSpiderInfo, spiderInfoMap, yierr := spider.GetSpiderInfoMap(spiderName)
 	if yierr != nil {
 		c.SetError(yierr)
 		return
 	}
 	c.SetOutMapData("spiderInfoMap", spiderInfoMap)
+	c.SetOutMapData("totalSpiderInfo", totalSpiderInfo)
 }

@@ -34,4 +34,10 @@ func (c *DetailController) Process() {
 		return
 	}
 	c.SetOutMapData("spiderInfos", sis)
+	summary, yierr := global.RpcClient.CrawlerSummary(nodeName)
+	if yierr != nil {
+		c.SetError(yierr)
+		return
+	}
+	c.SetOutMapData("summary", summary)
 }

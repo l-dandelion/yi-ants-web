@@ -13,9 +13,11 @@ import (
 	"github.com/l-dandelion/yi-ants-go/lib/library/log"
 	"time"
 	"github.com/l-dandelion/yi-ants-go/core/processors/mysqlprocessor"
+	"fmt"
 )
 
 func main() {
+	fmt.Print("Why")
 	beego.Run()
 }
 
@@ -40,6 +42,11 @@ func init() {
 	if yierr != nil {
 		panic(yierr)
 	}
+	viewpath := beego.AppConfig.String("viewpath")
+	if viewpath != "" {
+		beego.SetViewsPath(viewpath)
+	}
+	beego.SetStaticPath("lib", "lib")
 	mcluster := cluster.New(settings, mnode.GetNodeInfo())
 	rpcClient := rpc.NewRpcClient(mnode, mcluster)
 	distributer := watcher.NewDistributer(mnode, mcluster, rpcClient)
