@@ -86,6 +86,14 @@
 			</ul>
 		</dd>
 	</dl>
+	<dl id="menu-tongji">
+        <dt><i class="Hui-iconfont">&#xe61a;</i> 数据库<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+        <dd>
+            <ul>
+                <li><a data-href="/database" data-title="表查询" href="javascript:void(0)">表查询</a></li>
+            </ul>
+        </dd>
+    </dl>
 		
 </div>
 </aside>
