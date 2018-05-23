@@ -1,8 +1,8 @@
 package custom
 
 import (
-	spiderservice "github.com/l-dandelion/yi-ants-web/models/service/spider"
 	"fmt"
+	spiderservice "github.com/l-dandelion/yi-ants-web/models/service/spider"
 	"strings"
 )
 
@@ -17,19 +17,20 @@ var ruleStr = `{
 
 func GenCodeforcesModel(name, usernames string) *spiderservice.Model {
 	parserModel := &spiderservice.ParserModel{
-		Type:"template",
-		Rule:fmt.Sprintf(ruleStr, name),
+		Type: "template",
+		Rule: fmt.Sprintf(ruleStr, name),
 	}
 	processModel := &spiderservice.ProcessorModel{
-		Type:"mysql",
+		Type: "mysql",
 	}
 	model := &spiderservice.Model{
-		Name: name,
-		Depth: "0",
-		Domains: "codeforce.com",
-		ParserModels: []*spiderservice.ParserModel{parserModel},
+		Name:            name,
+		Depth:           "0",
+		Domains:         "codeforce.com",
+		ParserModels:    []*spiderservice.ParserModel{parserModel},
 		ProcessorModels: []*spiderservice.ProcessorModel{processModel},
-		Urls:fmt.Sprintf("http://codeforces.com/profile/{%s}", strings.TrimSpace(usernames)),
+		Urls:            fmt.Sprintf("http://codeforces.com/profile/{%s}", strings.TrimSpace(usernames)),
+		MaxThread:       "10",
 	}
 	return model
 }

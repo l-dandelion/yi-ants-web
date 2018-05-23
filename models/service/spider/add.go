@@ -2,6 +2,7 @@ package spider
 
 import (
 	"encoding/json"
+	"github.com/astaxie/beego"
 	parsermodel "github.com/l-dandelion/yi-ants-go/core/parsers/model"
 	processormodel "github.com/l-dandelion/yi-ants-go/core/processors/model"
 	"github.com/l-dandelion/yi-ants-go/core/scheduler"
@@ -11,7 +12,6 @@ import (
 	"io/ioutil"
 	"os"
 	"strconv"
-	"github.com/astaxie/beego"
 )
 
 func ReadAll(filePth string) ([]byte, error) {
@@ -22,7 +22,7 @@ func ReadAll(filePth string) ([]byte, error) {
 	return ioutil.ReadAll(f)
 }
 
-func GenSpiderFromFile(name string, maxDepth int, domains []string, parserFileName, processorFileName string, urlStrs []string) (spider.Spider, *constant.YiError) {
+func GenSpiderFromFile(name string, maxDepth int, domains []string, parserFileName, processorFileName string, urlStrs []string, maxthread int) (spider.Spider, *constant.YiError) {
 	requestArgs := scheduler.RequestArgs{
 		MaxDepth:        uint32(maxDepth),
 		AcceptedDomains: domains,
@@ -66,11 +66,12 @@ func GenSpiderFromFile(name string, maxDepth int, domains []string, parserFileNa
 		urlStrs,
 		nil,
 		[]*parsermodel.Model{parsersModel},
-		[]*processormodel.Model{processorsModel})
+		[]*processormodel.Model{processorsModel},
+		maxthread)
 	return sp, yierr
 }
 
-func GenSpiderFromStr(name string, maxDepth int, domains []string, parserStr, processorStr string, urlStrs []string) (spider.Spider, *constant.YiError) {
+func GenSpiderFromStr(name string, maxDepth int, domains []string, parserStr, processorStr string, urlStrs []string, maxThread int) (spider.Spider, *constant.YiError) {
 	requestArgs := scheduler.RequestArgs{
 		MaxDepth:        uint32(maxDepth),
 		AcceptedDomains: domains,
@@ -105,12 +106,13 @@ func GenSpiderFromStr(name string, maxDepth int, domains []string, parserStr, pr
 		urlStrs,
 		nil,
 		[]*parsermodel.Model{parsersModel},
-		[]*processormodel.Model{processorsModel})
+		[]*processormodel.Model{processorsModel},
+		maxThread)
 	return sp, yierr
 }
 
 func GenSpiderFromModels(name string, maxDepth int, domains []string,
-	parsersModels []*parsermodel.Model, processorsModels []*processormodel.Model, urlStrs []string) (spider.Spider, *constant.YiError) {
+	parsersModels []*parsermodel.Model, processorsModels []*processormodel.Model, urlStrs []string, maxThread int) (spider.Spider, *constant.YiError) {
 	requestArgs := scheduler.RequestArgs{
 		MaxDepth:        uint32(maxDepth),
 		AcceptedDomains: domains,
@@ -132,12 +134,17 @@ func GenSpiderFromModels(name string, maxDepth int, domains []string,
 		urlStrs,
 		nil,
 		parsersModels,
-		processorsModels)
+		processorsModels,
+		maxThread)
 	return sp, yierr
 }
 
 func GenSpiderFromModel(model *Model) (spider.Spider, *constant.YiError) {
 	maxDepth, err := strconv.Atoi(model.Depth)
+	if err != nil {
+		return nil, constant.NewYiErrore(constant.ERR_SPIDER_NEW, err)
+	}
+	maxthread, err := strconv.Atoi(model.MaxThread)
 	if err != nil {
 		return nil, constant.NewYiErrore(constant.ERR_SPIDER_NEW, err)
 	}
@@ -152,7 +159,7 @@ func GenSpiderFromModel(model *Model) (spider.Spider, *constant.YiError) {
 	if err != nil {
 		return nil, constant.NewYiErrore(constant.ERR_SPIDER_NEW, err)
 	}
-	return GenSpiderFromModels(model.Name, maxDepth, domains, parserModels, processorModels, urls)
+	return GenSpiderFromModels(model.Name, maxDepth, domains, parserModels, processorModels, urls, maxthread)
 }
 
 func GenParserModels(models []*ParserModel) ([]*parsermodel.Model, error) {
@@ -217,4 +224,5 @@ type Model struct {
 	ParserModels    []*ParserModel    `json:"parserModels"`
 	ProcessorModels []*ProcessorModel `json:"processorModels"`
 	Urls            string            `json:"urls"`
+	MaxThread       string            `json:"maxthread"`
 }

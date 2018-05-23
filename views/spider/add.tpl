@@ -44,6 +44,12 @@
 				<input type="text" class="input-text" value="" placeholder="默认为无穷大" id="maxdepth" name="depth">
 			</div>
 		</div>
+		<div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>最大并发：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" value="10" placeholder="默认为10" id="maxthread" name="maxthread">
+            </div>
+        </div>
 
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>抓取域名：</label>
@@ -138,6 +144,7 @@
 		mdata.parserModels = GetParserModels()
 		mdata.processorModels = GetProcessorModels()
 		mdata.urls = $("textarea[name='urls']").val()
+		mdata.maxthread = $("input[name='maxthread']").val()
 		console.log(mdata)
 		$.ajax({
 		    url: "/api/spider/add",

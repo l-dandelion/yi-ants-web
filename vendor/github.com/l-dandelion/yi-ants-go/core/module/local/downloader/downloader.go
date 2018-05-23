@@ -7,6 +7,7 @@ import (
 	"github.com/l-dandelion/yi-ants-go/core/module/data"
 	"github.com/l-dandelion/yi-ants-go/core/module/stub"
 	"github.com/l-dandelion/yi-ants-go/lib/constant"
+	"github.com/l-dandelion/yi-ants-go/lib/library/pool"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -18,7 +19,8 @@ const RETRY_TIMES = 3
 func New(
 	mid module.MID,
 	client *http.Client,
-	scoreCalculator module.CalculateScore) (downloader module.Downloader, yierr *constant.YiError) {
+	scoreCalculator module.CalculateScore,
+	maxThread int) (downloader module.Downloader, yierr *constant.YiError) {
 	moduleBase, yierr := stub.NewModuleInternal(mid, scoreCalculator)
 	//check whether the args are vaild
 	if yierr != nil {
@@ -32,6 +34,7 @@ func New(
 	return &myDownloader{
 		ModuleInternal: moduleBase,
 		httpClient:     client,
+		Pool:           *pool.NewPool(maxThread),
 	}, nil
 }
 
@@ -41,6 +44,7 @@ func New(
 type myDownloader struct {
 	stub.ModuleInternal              //module internal instance
 	httpClient          *http.Client //http client for downloading
+	pool.Pool
 }
 
 /*
