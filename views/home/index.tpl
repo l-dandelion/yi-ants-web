@@ -94,6 +94,14 @@
             </ul>
         </dd>
     </dl>
+    <dl id="menu-tongji">
+        <dt><i class="Hui-iconfont">&#xe61a;</i> 已定制<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+        <dd>
+            <ul>
+                <li><a data-href="/custom/codeforce" data-title="codeforce" href="javascript:void(0)">codeforce</a></li>
+            </ul>
+        </dd>
+    </dl>
 		
 </div>
 </aside>

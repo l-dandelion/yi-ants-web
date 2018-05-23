@@ -11,6 +11,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strconv"
+	"github.com/astaxie/beego"
 )
 
 func ReadAll(filePth string) ([]byte, error) {
@@ -144,6 +145,7 @@ func GenSpiderFromModel(model *Model) (spider.Spider, *constant.YiError) {
 	urls := utils.SplitAndTrimSpace(model.Urls, ";")
 	parserModels, err := GenParserModels(model.ParserModels)
 	if err != nil {
+		beego.Info("parser error:", err)
 		return nil, constant.NewYiErrore(constant.ERR_SPIDER_NEW, err)
 	}
 	processorModels, err := GenProcessorModels(model.ProcessorModels)
