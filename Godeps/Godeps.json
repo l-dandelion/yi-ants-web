@@ -1,0 +1,344 @@
+{
+	"ImportPath": "github.com/l-dandelion/yi-ants-web",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/PuerkitoBio/goquery",
+			"Comment": "v1.4.0-2-gea1bc64",
+			"Rev": "ea1bc64a63088ac2bbf1a2edcae38413794a7710"
+		},
+		{
+			"ImportPath": "github.com/andybalholm/cascadia",
+			"Comment": "v1.0.0",
+			"Rev": "901648c87902174f774fac311d7f176f8647bdaa"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego",
+			"Comment": "v1.9.2-2-gf166888",
+			"Rev": "f16688817aa428d10361394015b40d096b680542"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/config",
+			"Comment": "v1.9.2-2-gf166888",
+			"Rev": "f16688817aa428d10361394015b40d096b680542"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/context",
+			"Comment": "v1.9.2-2-gf166888",
+			"Rev": "f16688817aa428d10361394015b40d096b680542"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/context/param",
+			"Comment": "v1.9.2-2-gf166888",
+			"Rev": "f16688817aa428d10361394015b40d096b680542"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/grace",
+			"Comment": "v1.9.2-2-gf166888",
+			"Rev": "f16688817aa428d10361394015b40d096b680542"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/logs",
+			"Comment": "v1.9.2-2-gf166888",
+			"Rev": "f16688817aa428d10361394015b40d096b680542"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/orm",
+			"Comment": "v1.9.2-2-gf166888",
+			"Rev": "f16688817aa428d10361394015b40d096b680542"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/session",
+			"Comment": "v1.9.2-2-gf166888",
+			"Rev": "f16688817aa428d10361394015b40d096b680542"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/toolbox",
+			"Comment": "v1.9.2-2-gf166888",
+			"Rev": "f16688817aa428d10361394015b40d096b680542"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/utils",
+			"Comment": "v1.9.2-2-gf166888",
+			"Rev": "f16688817aa428d10361394015b40d096b680542"
+		},
+		{
+			"ImportPath": "github.com/go-sql-driver/mysql",
+			"Comment": "v1.3-60-g3287d94",
+			"Rev": "3287d94d4c6a48a63e16fffaabf27ab20203af2a"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/action",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/action/rpc",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/action/watcher",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/cluster",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/crawler",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/module",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/module/data",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/module/local/analyzer",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/module/local/downloader",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/module/local/pipeline",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/module/stub",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/node",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/parsers",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/parsers/filter",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/parsers/model",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/parsers/sourceparser",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/parsers/templateparser",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/processors",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/processors/consoleprocessor",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/processors/model",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/processors/mysqlprocessor",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/processors/sourceprocessor",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/scheduler",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/core/spider",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/base",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/common",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/constant",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/library/buffer",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/library/cmap",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/library/log",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/library/parseurl",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/library/plugin",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/library/pool",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/library/reader",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/l-dandelion/yi-ants-go/lib/utils",
+			"Rev": "8c9aa3f65fbabb3ce1687106b9f7cfb6974a89be"
+		},
+		{
+			"ImportPath": "github.com/lestrrat/go-file-rotatelogs",
+			"Rev": "d3151e2a480fdcd05fb97102f5310a47d96274c4"
+		},
+		{
+			"ImportPath": "github.com/lestrrat/go-strftime",
+			"Rev": "ba3bf9c1d0421aa146564a632931730344f1f9f1"
+		},
+		{
+			"ImportPath": "github.com/pkg/errors",
+			"Comment": "v0.8.0-12-g816c908",
+			"Rev": "816c9085562cd7ee03e7f8188a1cfd942858cded"
+		},
+		{
+			"ImportPath": "github.com/rifflock/lfshook",
+			"Comment": "v2.3-2-g62f5e06",
+			"Rev": "62f5e0662816a462697d29f396fd19376d17f65b"
+		},
+		{
+			"ImportPath": "github.com/sirupsen/logrus",
+			"Comment": "v1.0.5-16-g778f2e7",
+			"Rev": "778f2e774c725116edbc3d039dc0dfc1cc62aae8"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ssh/terminal",
+			"Rev": "2b6c08872f4b66da917bb4ce98df4f0307330f78"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html",
+			"Rev": "5f9ae10d9af5b1c89ae6904293b14b064d4ada23"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html/atom",
+			"Rev": "5f9ae10d9af5b1c89ae6904293b14b064d4ada23"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html/charset",
+			"Rev": "5f9ae10d9af5b1c89ae6904293b14b064d4ada23"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "79b0c6888797020a994db17c8510466c72fe75d9"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/windows",
+			"Rev": "79b0c6888797020a994db17c8510466c72fe75d9"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/charmap",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/htmlindex",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/internal",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/internal/identifier",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/japanese",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/korean",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/simplifiedchinese",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/traditionalchinese",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/unicode",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/language",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/language/compact",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/tag",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/utf8internal",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/language",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/runes",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		},
+		{
+			"ImportPath": "golang.org/x/text/transform",
+			"Comment": "v0.3.0-47-g7922cc4",
+			"Rev": "7922cc490dd5a7dbaa7fd5d6196b49db59ac042f"
+		}
+	]
+}
