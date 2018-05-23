@@ -312,6 +312,7 @@ func (spider *mySpider) SpiderStatus() *SpiderStatus {
 		StartTime:       spider.StartTime,
 		EndTime:         spider.EndTime,
 		CreatedAt:       spider.CreatedAt,
+		MaxThread:       spider.MaxThread,
 	}
 }
 
